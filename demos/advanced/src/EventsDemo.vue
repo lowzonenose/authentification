@@ -1,6 +1,6 @@
 <script setup>
 import { onBeforeUnmount, ref, watch } from 'vue'
-import { useAuth } from 'authentification-vue-oidc'
+import { useAuth } from '@lowzonenose/authentification-vue-oidc'
 
 const { status, isAuthenticated, error, login, logout, on } = useAuth()
 const events = ref([])

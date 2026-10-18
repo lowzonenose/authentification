@@ -1,6 +1,6 @@
 <script setup lang="js">
 import { computed } from 'vue';
-import { useAuth } from 'authentification-vue-oidc';
+import { useAuth } from '@lowzonenose/authentification-vue-oidc';
 import NotConnected from '../components/NotConnected.vue';
 
 const { user, isAuthenticated } = useAuth();

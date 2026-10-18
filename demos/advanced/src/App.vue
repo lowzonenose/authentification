@@ -1,6 +1,6 @@
 <script setup>
 import { inject, reactive, ref } from 'vue'
-import { authOptionsFromEnv, AuthError } from 'authentification-vue-oidc'
+import { authOptionsFromEnv, AuthError } from '@lowzonenose/authentification-vue-oidc'
 
 const authReady = inject('authReady')
 const initialOptions = inject('initialOptions')

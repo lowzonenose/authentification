@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue';
-import { useAuth } from 'authentification-vue-oidc';
+import { useAuth } from '@lowzonenose/authentification-vue-oidc';
 
 const { user, isAuthenticated, status } = useAuth();
 const userName = computed(() => user.value?.name || user.value?.email || user.value?.sub || '');

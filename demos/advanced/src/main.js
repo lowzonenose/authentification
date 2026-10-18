@@ -1,5 +1,5 @@
 import { createApp, ref } from 'vue'
-import { authOptionsFromEnv, createAuth } from 'authentification-vue-oidc'
+import { authOptionsFromEnv, createAuth } from '@lowzonenose/authentification-vue-oidc'
 import App from './App.vue'
 import AuthSession from './AuthSession.vue'
 import EventsDemo from './EventsDemo.vue'

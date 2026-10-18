@@ -8,6 +8,6 @@ export default defineConfig(({ command }) => ({
   plugins: [vue()],
   // En dev, la librairie est servie depuis src/ pour éviter un dist/ périmé.
   ...(command === 'serve'
-    ? { resolve: { alias: { 'authentification-vue-oidc': fileURLToPath(new URL('../../src/index.js', import.meta.url)) } } }
+    ? { resolve: { alias: { '@lowzonenose/authentification-vue-oidc': fileURLToPath(new URL('../../src/index.js', import.meta.url)) } } }
     : {}),
 }))

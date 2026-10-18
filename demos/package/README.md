@@ -1,6 +1,6 @@
 # Démo simple : authentification OIDC et Vue Router
 
-Application multi-pages utilisant le package local `authentification-vue-oidc`.
+Application multi-pages utilisant le package local `@lowzonenose/authentification-vue-oidc`.
 Le plugin est installé une seule fois dans [src/main.js](src/main.js), avant le routeur.
 Toutes les pages accèdent à la session avec `useAuth()`, sans Pinia ni persistance dans `localStorage`.
 

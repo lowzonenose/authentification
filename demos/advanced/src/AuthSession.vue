@@ -1,6 +1,6 @@
 <script setup>
 import { computed, onBeforeUnmount, ref } from 'vue'
-import { useAuth } from 'authentification-vue-oidc'
+import { useAuth } from '@lowzonenose/authentification-vue-oidc'
 
 const { user, isAuthenticated, status, error, login, logout, getAccessToken, hasRole, on } = useAuth()
 const tokenCheck = ref('')

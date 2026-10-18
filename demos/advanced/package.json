@@ -8,7 +8,7 @@
     "build": "vite build"
   },
   "dependencies": {
-    "authentification-vue-oidc": "file:../..",
+    "@lowzonenose/authentification-vue-oidc": "file:../..",
     "vue": "^3.5.0"
   },
   "devDependencies": {

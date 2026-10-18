@@ -15,7 +15,7 @@ export default defineConfig(({ command }) => ({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       // En dev, la librairie est servie depuis src/ pour éviter un dist/ périmé.
       ...(command === 'serve'
-        ? { 'authentification-vue-oidc': fileURLToPath(new URL('../../src/index.js', import.meta.url)) }
+        ? { '@lowzonenose/authentification-vue-oidc': fileURLToPath(new URL('../../src/index.js', import.meta.url)) }
         : {}),
     }
   }

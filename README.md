@@ -9,8 +9,13 @@ Le client est une SPA publique : aucun `client_secret` ne doit être fourni.
 ## 📦 Installation
 
 ```sh
-npm install authentification-vue-oidc vue
+npm config set @lowzonenose:registry https://npm.pkg.github.com
+npm login --scope=@lowzonenose --auth-type=legacy --registry=https://npm.pkg.github.com
+npm install @lowzonenose/authentification-vue-oidc vue
 ```
+
+Lors de `npm login`, utilise ton nom d'utilisateur GitHub et un Personal Access
+Token (classic) avec la permission `read:packages` comme mot de passe.
 
 `vue` est une dépendance paire (peerDependency). 
 `vue-router` est optionnelle et nécessaire uniquement au guard de routes.
@@ -19,7 +24,7 @@ npm install authentification-vue-oidc vue
 
 ```js
 import { createApp } from 'vue'
-import { createAuth } from 'authentification-vue-oidc'
+import { createAuth } from '@lowzonenose/authentification-vue-oidc'
 import App from './App.vue'
 
 const auth = createAuth({
@@ -38,7 +43,7 @@ Dans un composant Vue :
 
 ```js
 <script setup>
-import { useAuth } from 'authentification-vue-oidc'
+import { useAuth } from '@lowzonenose/authentification-vue-oidc'
 
 const { user, status, isAuthenticated, login, logout } = useAuth()
 </script>
@@ -102,7 +107,7 @@ La mémoire est le stockage de tokens par défaut. `storage: 'session'` ou un `S
 Configuration par variables publiques :
 
 ```js
-import { authOptionsFromEnv, createAuth } from 'authentification-vue-oidc'
+import { authOptionsFromEnv, createAuth } from '@lowzonenose/authentification-vue-oidc'
 
 const env = import.meta.env
 const auth = createAuth({
@@ -163,7 +168,7 @@ Un modèle complet de configuration Vite est également disponible à la racine 
 ## 🧩 Vue Router
 
 ```js
-import { createAuthGuard } from 'authentification-vue-oidc'
+import { createAuthGuard } from '@lowzonenose/authentification-vue-oidc'
 
 router.beforeEach(createAuthGuard({ forbiddenRoute: '/forbidden' }))
 ```
@@ -173,7 +178,7 @@ Le guard attend la fin de l'initialisation, protège `meta.requiresAuth`, vérif
 ## 🧩 Requêtes API
 
 ```js
-import { createAuthFetch } from 'authentification-vue-oidc'
+import { createAuthFetch } from '@lowzonenose/authentification-vue-oidc'
 
 const apiFetch = createAuthFetch()
 const response = await apiFetch('https://api.example.org/v1/profile')

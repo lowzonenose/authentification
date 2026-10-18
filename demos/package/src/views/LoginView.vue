@@ -1,6 +1,6 @@
 <script setup lang="js">
 import { RouterLink } from 'vue-router';
-import { useAuth } from 'authentification-vue-oidc';
+import { useAuth } from '@lowzonenose/authentification-vue-oidc';
 import UserStatus from '../components/UserStatus.vue';
 
 const { isAuthenticated, status, login, logout } = useAuth();

@@ -1,5 +1,5 @@
 {
-  "name": "authentification-vue-oidc",
+  "name": "@lowzonenose/authentification-vue-oidc",
   "version": "0.1.0",
   "description": "Librairie d'authentification OIDC pour Vue 3",
   "license": "AGPL-3.0-only",
@@ -10,6 +10,9 @@
     "types",
     "docs"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "workspaces": [
     "demos/advanced",
     "demos/simple"

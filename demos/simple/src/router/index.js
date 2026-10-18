@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { createAuthGuard } from 'authentification-vue-oidc';
+import { createAuthGuard } from '@lowzonenose/authentification-vue-oidc';
 
 import LoginView from '../views/LoginView.vue';
 import ProfileView from '../views/ProfileView.vue';
