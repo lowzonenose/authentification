@@ -1,0 +1,5 @@
+export { createAuth, resetAuth, useAuth } from './core/auth.js'
+export { createAuthFetch } from './http/auth-fetch.js'
+export { createAuthGuard } from './router/guard.js'
+export { authOptionsFromEnv } from './core/config.js'
+export { AuthError } from './core/errors.js'

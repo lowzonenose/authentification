@@ -1,0 +1,12 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "authentification-vue-oidc",
+  "entryPoints": ["types/index.d.ts"],
+  "tsconfig": "tsconfig.json",
+  "out": "docs/reference",
+  "readme": "none",
+  "excludePrivate": true,
+  "categorizeByGroup": false,
+  "categoryOrder": ["Plugin", "Composable", "Configuration", "Router", "HTTP", "État", "Événements", "Erreurs", "*"],
+  "treatWarningsAsErrors": true
+}

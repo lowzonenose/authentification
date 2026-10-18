@@ -1,0 +1,6 @@
+node_modules/
+dist/
+coverage/
+docs/reference/
+demos/vue3/.env*
+!demos/vue3/.env.example
